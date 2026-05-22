@@ -1,135 +1,425 @@
-# Personal Brand Website Draft
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anshu | Climate Intelligence & Product Marketing</title>
 
-## Hero Section
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-# Anshu
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-### Product Marketing Manager in Climate Intelligence
+    html {
+      scroll-behavior: smooth;
+    }
 
-Turning climate data into market narratives, operational intelligence, and human-centered storytelling.
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #060816;
+      color: #f5f7fa;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
 
-[Connect on LinkedIn]
-[View Resume]
+    body::before {
+      content: "";
+      position: fixed;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(0,255,170,0.08) 0%, transparent 70%);
+      top: -200px;
+      right: -200px;
+      z-index: -1;
+    }
 
----
+    body::after {
+      content: "";
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0,140,255,0.08) 0%, transparent 70%);
+      bottom: -200px;
+      left: -200px;
+      z-index: -1;
+    }
 
-## About
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-I work at Ambee, a climate intelligence company focused on transforming environmental data into actionable insights for businesses, healthcare systems, and operational decision-making.
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(6, 8, 22, 0.75);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      z-index: 999;
+    }
 
-My work sits at the intersection of product marketing, climate intelligence, research communication, and strategic storytelling. I enjoy translating complex scientific systems into narratives people can actually understand and act on.
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
 
-I’m particularly interested in how environmental signals influence human systems: health, cities, mobility, insurance, healthcare infrastructure, and everyday behavior.
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
 
-Beyond marketing, I spend a lot of time studying communication psychology, internet culture, digital behavior, and how modern attention shapes perception.
+    .logo span {
+      color: #27e1a7;
+    }
 
----
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
 
-## Current Focus
+    .nav-links a {
+      color: #d9dce3;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: 0.3s ease;
+    }
 
-* Climate intelligence storytelling
-* Product marketing for environmental data products
-* Narrative positioning for deep-tech products
-* Healthcare and environmental intelligence communication
-* Research-backed content systems
-* Human-centered B2B messaging
+    .nav-links a:hover {
+      color: #27e1a7;
+    }
 
----
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 0 60px;
+    }
 
-## Experience
+    .hero-content {
+      max-width: 850px;
+    }
 
-### Product Marketing Manager
+    .tag {
+      display: inline-block;
+      padding: 10px 18px;
+      background: rgba(39, 225, 167, 0.12);
+      border: 1px solid rgba(39, 225, 167, 0.2);
+      border-radius: 999px;
+      color: #27e1a7;
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+    }
 
-#### Ambee
+    h1 {
+      font-size: 4.5rem;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -2px;
+    }
 
-* Building positioning and messaging for climate intelligence products
-* Translating scientific and environmental datasets into business narratives
-* Creating data-driven marketing systems and strategic content
-* Working on healthcare, climate risk, and environmental intelligence communication
+    .hero p {
+      font-size: 1.15rem;
+      color: #b6bcc8;
+      max-width: 760px;
+      margin-bottom: 40px;
+    }
 
----
+    .button-group {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
 
-## Philosophy
+    .btn {
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
 
-The future belongs to people who can bridge complexity and clarity.
+    .btn-primary {
+      background: #27e1a7;
+      color: #061018;
+    }
 
-Data alone is not intelligence.
-Interpretation matters.
-Communication matters.
-Context matters.
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(39,225,167,0.25);
+    }
 
-The world has enough dashboards.
-What it needs is meaning.
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #f5f7fa;
+      background: rgba(255,255,255,0.03);
+    }
 
----
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
+    }
 
-## Skills
+    section {
+      padding: 110px 0;
+    }
 
-* Product Marketing
-* Strategic Positioning
-* Climate Intelligence Communication
-* Storytelling Systems
-* Market Research
-* GTM Messaging
-* Content Strategy
-* B2B Narrative Design
-* Brand Communication
-* Insight Translation
+    .section-title {
+      font-size: 2.4rem;
+      margin-bottom: 18px;
+    }
 
----
+    .section-subtitle {
+      color: #9da6b5;
+      margin-bottom: 60px;
+      max-width: 700px;
+    }
 
-## Contact
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
 
-Open to conversations around:
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 24px;
+      transition: 0.3s ease;
+    }
 
-* Climate-tech
-* Product marketing
-* Deep-tech storytelling
-* Strategic communication
-* Research-driven narratives
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(39,225,167,0.25);
+    }
 
-Email: [your@email.com](mailto:your@email.com)
-LinkedIn: linkedin.com/in/yourprofile
+    .card h3 {
+      margin-bottom: 14px;
+      font-size: 1.2rem;
+    }
 
----
+    .card p {
+      color: #aeb5c2;
+      font-size: 0.97rem;
+    }
 
-## Suggested Design Direction
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
 
-Recommended style based on your background:
+    .focus-item {
+      padding: 24px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      color: #d9dee7;
+    }
 
-### Theme
+    .quote {
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+      font-size: 2rem;
+      line-height: 1.6;
+      color: #f5f7fa;
+      font-weight: 500;
+    }
 
-Dark climate-tech editorial aesthetic.
+    .quote span {
+      color: #27e1a7;
+    }
 
-### Visual Identity
+    .contact-box {
+      text-align: center;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 60px 30px;
+      border-radius: 28px;
+    }
 
-* Deep charcoal / black background
-* Muted green-blue accent colors
-* Clean typography
-* Minimal animations
-* Scientific + modern feel
-* Apple-like spacing with climate-tech personality
+    .contact-box p {
+      color: #b4bcc8;
+      margin: 20px auto 30px;
+      max-width: 600px;
+    }
 
-### Ideal Sections for Final Website
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 30px 0;
+      text-align: center;
+      color: #7d8797;
+      font-size: 0.9rem;
+    }
 
-1. Hero
-2. About
-3. Current Focus
-4. Experience
-5. Writing / Insights
-6. Contact
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
 
----
+      .nav-links {
+        gap: 14px;
+        font-size: 0.85rem;
+      }
 
-## GitHub Repository Suggestion
+      .quote {
+        font-size: 1.4rem;
+      }
 
-Repository Name:
-`anshu-portfolio`
+      .button-group {
+        flex-direction: column;
+      }
 
-Website URL after publishing:
-`https://anshuresearch.github.io/anshu-portfolio`
+      .btn {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
 
----
+  <nav>
+    <div class="container nav-wrapper">
+      <div class="logo">ANSHU<span>.</span></div>
 
-## What Happens Next
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#focus">Focus</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="tag">
+          Climate Intelligence • Product Marketing • Strategic Storytelling
+        </div>
+
+        <h1>
+          Turning complex climate data into narratives people can actually understand.
+        </h1>
+
+        <p>
+          I work at the intersection of climate intelligence, product marketing, and research-driven storytelling. My focus is translating scientific systems into actionable communication that helps businesses, healthcare systems, and decision-makers make sense of environmental complexity.
+        </p>
+
+        <div class="button-group">
+          <a href="#contact" class="btn btn-primary">Let's Connect</a>
+          <a href="https://www.linkedin.com" target="_blank" class="btn btn-secondary">LinkedIn</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+
+      <h2 class="section-title">About</h2>
+      <p class="section-subtitle">
+        Product marketing with scientific depth, narrative clarity, and systems thinking.
+      </p>
+
+      <div class="about-grid">
+
+        <div class="card">
+          <h3>Climate-Tech Communication</h3>
+          <p>
+            Building narratives around environmental intelligence, healthcare systems, climate risk, and operational decision-making.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Strategic Positioning</h3>
+          <p>
+            Translating complex datasets and technical products into positioning frameworks that resonate with real business problems.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Human-Centered Storytelling</h3>
+          <p>
+            Exploring how communication shapes trust, perception, adoption, and decision-making in modern digital ecosystems.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="focus">
+    <div class="container">
+
+      <h2 class="section-title">Current Focus</h2>
+      <p class="section-subtitle">
+        Areas I currently spend most of my time thinking, researching, and building around.
+      </p>
+
+      <div class="focus-grid">
+
+        <div class="focus-item">Climate Intelligence</div>
+        <div class="focus-item">Environmental Data Narratives</div>
+        <div class="focus-item">Product Marketing</div>
+        <div class="focus-item">Healthcare Communication</div>
+        <div class="focus-item">Strategic Messaging</div>
+        <div class="focus-item">B2B Storytelling</div>
+        <div class="focus-item">Research-Led Content</div>
+        <div class="focus-item">Digital Behavior & Attention</div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="philosophy">
+    <div class="container">
+
+      <div class="quote">
+        “The world already has enough dashboards. <span>What it needs is meaning.</span>”
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2 class="section-title">Let’s Build Something Meaningful</h2>
+
+        <p>
+          Open to conversations around climate-tech, product marketing, deep-tech storytelling, strategic communication, and research-driven narratives.
+        </p>
+
+        <div class="button-group" style="justify-content:center;">
+          <a href="mailto:your@email.com" class="btn btn-primary">Email Me</a>
+          <a href="https://www.linkedin.com" target="_blank" class="btn btn-secondary">LinkedIn</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Anshu • Built with curiosity, caffeine, and climate-tech optimism.
+  </footer>
+
+</body>
+</html>
